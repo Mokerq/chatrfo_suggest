@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отправить новость RF Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .container {
+            background-color: #2d2d2d;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #00ff9d;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #00ff9d;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #3d3d3d;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 200px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: #00ff9d;
+            color: #1a1a1a;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #00e68a;
+        }
+
+        .rules {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📡 Отправить новость в RF Online канал</h1>
+        
+        <form id="newsForm">
+            <div class="form-group">
+                <label for="title">Заголовок новости:</label>
+                <input type="text" id="title" name="title" required placeholder="Введите заголовок новости">
+            </div>
+
+            <div class="form-group">
+                <label for="content">Текст новости:</label>
+                <textarea id="content" name="content" required placeholder="Напишите полный текст новости..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="author">Ваше имя (опционально):</label>
+                <input type="text" id="author" name="author" placeholder="Как к вам обращаться?">
+            </div>
+
+            <div style="text-align: center;">
+                <button type="submit">🚀 Отправить на модерацию</button>
+            </div>
+        </form>
+
+        <div class="rules">
+            <h3>📌 Правила оформления:</h3>
+            <ul>
+                <li>Новости должны быть связаны с RF Online</li>
+                <li>Запрещён плагиат и фейковые новости</li>
+                <li>Максимальная длина новости - 2000 символов</li>
+                <li>Новость будет опубликована после проверки</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('newsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Здесь должна быть логика отправки данных
+            // Например, через fetch() на ваш сервер
+            
+            // Временное уведомление
+            alert('Новость отправлена на модерацию! Спасибо!');
+            document.getElementById('newsForm').reset();
+        });
+    </script>
+</body>
+</html>
